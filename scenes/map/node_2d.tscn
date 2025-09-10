@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cksbl8mfi2pjt"]
+[gd_scene load_steps=5 format=3 uid="uid://cksbl8mfi2pjt"]
 
 [ext_resource type="Texture2D" uid="uid://boqwkdi83rvcq" path="res://assets/Space Background.png" id="1_6xkne"]
 [ext_resource type="PackedScene" uid="uid://6kpg162fgwue" path="res://scenes/map/highlight_tile.tscn" id="2_bf6xn"]
+[ext_resource type="Texture2D" uid="uid://drxnyh5kvivrw" path="res://assets/AdobeStock_Earth.png" id="3_8sn85"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bf6xn"]
-radius = 400.08
+radius = 223.72
 
 [node name="Level" type="Node2D"]
 
@@ -14,9 +15,19 @@ offset_bottom = 700.0
 texture = ExtResource("1_6xkne")
 
 [node name="HighlightTile" parent="." instance=ExtResource("2_bf6xn")]
+z_index = 3
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(572, 644.99)
+scale = Vector2(2.21705, 0.436128)
+texture = ExtResource("3_8sn85")
+region_enabled = true
+region_rect = Rect2(267.91, 36.2163, 516.535, 243.824)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(552, 952)
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+visible = false
+z_index = 2
+position = Vector2(-5.41259, 98.6188)
 shape = SubResource("CircleShape2D_bf6xn")
