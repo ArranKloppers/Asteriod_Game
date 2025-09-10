@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cksbl8mfi2pjt"]
+
+[ext_resource type="Texture2D" uid="uid://boqwkdi83rvcq" path="res://assets/Space Background.png" id="1_6xkne"]
+[ext_resource type="PackedScene" uid="uid://6kpg162fgwue" path="res://map/highlight_tile.tscn" id="2_bf6xn"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 700.0
+texture = ExtResource("1_6xkne")
+
+[node name="HighlightTile" parent="." instance=ExtResource("2_bf6xn")]
