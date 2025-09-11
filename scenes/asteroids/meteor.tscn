@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciond8vrishta"]
+
+[ext_resource type="Script" path="res://scenes/asteroids/meteor.gd" id="1_pxso2"]
+[ext_resource type="Texture2D" uid="uid://dy2q71t3q8qw3" path="res://assets/Meteor.png" id="1_tcwo0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jaktq"]
+
+[node name="Meteor" type="CharacterBody2D"]
+script = ExtResource("1_pxso2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(158, 71)
+shape = SubResource("CircleShape2D_jaktq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(159.5, 70)
+scale = Vector2(0.90625, 0.9375)
+texture = ExtResource("1_tcwo0")

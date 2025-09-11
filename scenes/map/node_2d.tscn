@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cksbl8mfi2pjt"]
+[gd_scene load_steps=8 format=3 uid="uid://cksbl8mfi2pjt"]
 
 [ext_resource type="Texture2D" uid="uid://boqwkdi83rvcq" path="res://assets/Space Background.png" id="1_6xkne"]
 [ext_resource type="PackedScene" uid="uid://6kpg162fgwue" path="res://scenes/map/highlight_tile.tscn" id="2_bf6xn"]
 [ext_resource type="Texture2D" uid="uid://drxnyh5kvivrw" path="res://assets/AdobeStock_Earth.png" id="3_8sn85"]
+[ext_resource type="PackedScene" uid="uid://b58g22orf545m" path="res://scenes/turrets/turret_lvl_1.tscn" id="4_d71hg"]
+[ext_resource type="PackedScene" uid="uid://s2emyl4mrb0r" path="res://scenes/asteroids/asteroid.tscn" id="5_khj7d"]
+[ext_resource type="PackedScene" uid="uid://ciond8vrishta" path="res://scenes/asteroids/meteor.tscn" id="6_1fr2s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bf6xn"]
 radius = 223.72
@@ -17,17 +20,33 @@ texture = ExtResource("1_6xkne")
 [node name="HighlightTile" parent="." instance=ExtResource("2_bf6xn")]
 z_index = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Earth" type="Sprite2D" parent="."]
 position = Vector2(572, 644.99)
 scale = Vector2(2.21705, 0.436128)
 texture = ExtResource("3_8sn85")
 region_enabled = true
 region_rect = Rect2(267.91, 36.2163, 516.535, 243.824)
 
-[node name="Area2D" type="Area2D" parent="Sprite2D"]
+[node name="Area2D" type="Area2D" parent="Earth"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Earth/Area2D"]
 visible = false
 z_index = 2
 position = Vector2(-5.41259, 98.6188)
 shape = SubResource("CircleShape2D_bf6xn")
+
+[node name="Turret lvl1" parent="." instance=ExtResource("4_d71hg")]
+position = Vector2(96, 560)
+scale = Vector2(0.6, 0.6)
+
+[node name="asteroid" parent="." instance=ExtResource("5_khj7d")]
+position = Vector2(664, 16)
+
+[node name="asteroid2" parent="." instance=ExtResource("5_khj7d")]
+position = Vector2(272, 24)
+
+[node name="Meteor" parent="." instance=ExtResource("6_1fr2s")]
+position = Vector2(856, 24)
+
+[node name="Meteor2" parent="." instance=ExtResource("6_1fr2s")]
+position = Vector2(480, 16)
