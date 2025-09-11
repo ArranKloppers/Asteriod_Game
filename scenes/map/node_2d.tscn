@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://boqwkdi83rvcq" path="res://assets/Space Background.png" id="1_6xkne"]
 [ext_resource type="PackedScene" uid="uid://6kpg162fgwue" path="res://scenes/map/highlight_tile.tscn" id="2_bf6xn"]
 [ext_resource type="Texture2D" uid="uid://drxnyh5kvivrw" path="res://assets/AdobeStock_Earth.png" id="3_8sn85"]
-[ext_resource type="PackedScene" uid="uid://b58g22orf545m" path="res://scenes/turrets/turret_lvl_1.tscn" id="4_d71hg"]
 [ext_resource type="PackedScene" uid="uid://s2emyl4mrb0r" path="res://scenes/asteroids/asteroid.tscn" id="5_khj7d"]
 [ext_resource type="PackedScene" uid="uid://ciond8vrishta" path="res://scenes/asteroids/meteor.tscn" id="6_1fr2s"]
+[ext_resource type="PackedScene" path="res://scenes/map/preview.tscn" id="9_uqtl1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bf6xn"]
 radius = 223.72
@@ -35,10 +35,6 @@ z_index = 2
 position = Vector2(-5.41259, 98.6188)
 shape = SubResource("CircleShape2D_bf6xn")
 
-[node name="Turret lvl1" parent="." instance=ExtResource("4_d71hg")]
-position = Vector2(96, 560)
-scale = Vector2(0.6, 0.6)
-
 [node name="asteroid" parent="." instance=ExtResource("5_khj7d")]
 position = Vector2(664, 16)
 
@@ -50,3 +46,5 @@ position = Vector2(856, 24)
 
 [node name="Meteor2" parent="." instance=ExtResource("6_1fr2s")]
 position = Vector2(480, 16)
+
+[node name="Preview" parent="." instance=ExtResource("9_uqtl1")]
