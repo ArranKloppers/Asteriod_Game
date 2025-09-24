@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bey5ubf3whmdv"
-path="res://.godot/imported/towerDefense_tile015.png-814442c3f05205bbdff8fecd76aeff9c.ctex"
+uid="uid://dp5oybmbexso7"
+path="res://.godot/imported/iceBullet.png-1918ce15268661172accbc71037e55b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/map/towerDefense_tile015.png"
-dest_files=["res://.godot/imported/towerDefense_tile015.png-814442c3f05205bbdff8fecd76aeff9c.ctex"]
+source_file="res://assets/bullets/iceBullet.png"
+dest_files=["res://.godot/imported/iceBullet.png-1918ce15268661172accbc71037e55b5.ctex"]
 
 [params]
 

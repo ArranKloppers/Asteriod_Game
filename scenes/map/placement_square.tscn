@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://xbn80o6o2k5d"]
+
+[ext_resource type="Texture2D" uid="uid://je5b72inpor" path="res://assets/placementTile.png" id="1_a61jb"]
+[ext_resource type="Script" uid="uid://b8mxxp870wnlo" path="res://scenes/map/placement_square.gd" id="1_bx4oo"]
+[ext_resource type="Texture2D" uid="uid://brusvqydbvmrm" path="res://assets/placementTileEnabled.png" id="2_08tf2"]
+[ext_resource type="PackedScene" uid="uid://dfvmmb0kdd12w" path="res://scenes/map/turret_menu.tscn" id="3_pivy1"]
+
+[node name="PlacementSquare" type="TextureButton"]
+texture_filter = 1
+offset_left = -65.0
+offset_top = -69.0
+offset_right = 69.0
+offset_bottom = 65.0
+toggle_mode = true
+texture_normal = ExtResource("1_a61jb")
+texture_pressed = ExtResource("2_08tf2")
+stretch_mode = 0
+script = ExtResource("1_bx4oo")
+
+[node name="TurretMenu" parent="." instance=ExtResource("3_pivy1")]
+visible = false
+layout_mode = 0
+offset_left = 82.0
+offset_top = -144.0
+offset_right = 182.0
+offset_bottom = 5.0
+
+[connection signal="toggled" from="." to="." method="_on_toggled"]
+[connection signal="TurretSelected" from="TurretMenu" to="." method="_on_turret_menu_turret_selected"]

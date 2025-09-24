@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bey5ubf3whmdv"
-path="res://.godot/imported/towerDefense_tile015.png-814442c3f05205bbdff8fecd76aeff9c.ctex"
+uid="uid://byn444obyvisy"
+path="res://.godot/imported/regularAsteroid.png-ccb151d5c95bf2ec632d12d6aa346ccd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/map/towerDefense_tile015.png"
-dest_files=["res://.godot/imported/towerDefense_tile015.png-814442c3f05205bbdff8fecd76aeff9c.ctex"]
+source_file="res://assets/asteroids/regularAsteroid.png"
+dest_files=["res://.godot/imported/regularAsteroid.png-ccb151d5c95bf2ec632d12d6aa346ccd.ctex"]
 
 [params]
 

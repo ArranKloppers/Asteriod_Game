@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfvmmb0kdd12w"]
+
+[ext_resource type="Texture2D" uid="uid://l3ttiqbfq2c8" path="res://assets/menu_background.png" id="1_amee0"]
+[ext_resource type="Script" uid="uid://cspj636tc6ky4" path="res://scenes/map/turret_menu.gd" id="2_jynb8"]
+[ext_resource type="Texture2D" uid="uid://eo0jv0ki832b" path="res://assets/turrets/normalTurret.png" id="3_g88u8"]
+[ext_resource type="Texture2D" uid="uid://bs3a6md45pgrq" path="res://assets/turrets/normalTurretSelected.png" id="4_jynb8"]
+[ext_resource type="Texture2D" uid="uid://dwfq71j0hau0l" path="res://assets/turrets/piercingTurret.png" id="5_bm6he"]
+[ext_resource type="Texture2D" uid="uid://bdh5k3gs3onoj" path="res://assets/turrets/piercingTurretSelected.png" id="6_kwben"]
+
+[node name="TurretMenu" type="TextureRect"]
+offset_right = 100.0
+offset_bottom = 149.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_amee0")
+expand_mode = 1
+script = ExtResource("2_jynb8")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="Turret1" type="TextureButton" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("3_g88u8")
+texture_hover = ExtResource("4_jynb8")
+stretch_mode = 0
+
+[node name="Turret2" type="TextureButton" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_bm6he")
+texture_hover = ExtResource("6_kwben")
+stretch_mode = 0
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Turret1" to="." method="_on_turret_1_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Turret2" to="." method="_on_turret_2_pressed"]

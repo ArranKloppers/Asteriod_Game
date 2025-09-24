@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://8yx7jsro4mbn"]
+
+[ext_resource type="Script" uid="uid://b5m3il1f2vg1l" path="res://scenes/turrets/normal_turret.gd" id="1_bwbfq"]
+[ext_resource type="Texture2D" uid="uid://eo0jv0ki832b" path="res://assets/turrets/normalTurret.png" id="2_w2qlq"]
+
+[node name="NormalTurret" type="Node2D"]
+script = ExtResource("1_bwbfq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 1.5708
+texture = ExtResource("2_w2qlq")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

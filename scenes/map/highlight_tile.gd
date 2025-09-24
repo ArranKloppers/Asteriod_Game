@@ -1,3 +1,4 @@
+#cursor highlight tile
 class_name HighlightTile
 extends Node2D
 

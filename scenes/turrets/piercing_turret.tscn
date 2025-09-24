@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://crjruqckx4tbd"]
+
+[ext_resource type="Script" uid="uid://cgky5a0uew1ms" path="res://scenes/turrets/piercing_turret.gd" id="1_88rh7"]
+[ext_resource type="Texture2D" uid="uid://dwfq71j0hau0l" path="res://assets/turrets/piercingTurret.png" id="1_n4sua"]
+
+[node name="PiercingTurret" type="Node2D"]
+script = ExtResource("1_88rh7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 1.5708
+texture = ExtResource("1_n4sua")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

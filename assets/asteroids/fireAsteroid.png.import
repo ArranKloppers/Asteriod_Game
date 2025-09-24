@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bey5ubf3whmdv"
-path="res://.godot/imported/towerDefense_tile015.png-814442c3f05205bbdff8fecd76aeff9c.ctex"
+uid="uid://c7r6itsiv0248"
+path="res://.godot/imported/fireAsteroid.png-3ffc96abfa88355dfbdbe90a2e7a6cbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/map/towerDefense_tile015.png"
-dest_files=["res://.godot/imported/towerDefense_tile015.png-814442c3f05205bbdff8fecd76aeff9c.ctex"]
+source_file="res://assets/asteroids/fireAsteroid.png"
+dest_files=["res://.godot/imported/fireAsteroid.png-3ffc96abfa88355dfbdbe90a2e7a6cbb.ctex"]
 
 [params]
 

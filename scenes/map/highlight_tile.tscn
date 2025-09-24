@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://6kpg162fgwue"]
 
-[ext_resource type="Script" uid="uid://bp06xe2ofhky2" path="res://scenes/map/highlight_tile.gd" id="1_k5omk"]
-[ext_resource type="Texture2D" uid="uid://cmbxtsvb2bo8m" path="res://scenes/map/towerDefense_tile015.png" id="2_i7gqf"]
+[ext_resource type="Script" uid="uid://drrg0mlekqjyb" path="res://scenes/map/highlight_tile.gd" id="1_k5omk"]
+[ext_resource type="Texture2D" uid="uid://d0g6t658jr8qy" path="res://scenes/map/towerDefense_tile015.png" id="2_i7gqf"]
 
 [node name="HighlightTile" type="Node2D"]
 script = ExtResource("1_k5omk")

@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://b22u8ju53pwj5"]
+
+[ext_resource type="Script" uid="uid://d3gpnrajc1cns" path="res://scenes/earth/earth.gd" id="1_6ml4b"]
+[ext_resource type="Texture2D" uid="uid://dn504i2bosrsy" path="res://assets/Earth.png" id="2_6ml4b"]
+[ext_resource type="Texture2D" uid="uid://cf4k2xcmuddvs" path="res://assets/healthbarUnder.png" id="2_k5w1d"]
+[ext_resource type="Texture2D" uid="uid://b65787faudu7v" path="res://assets/healthbarProgress.png" id="3_3t2fh"]
+[ext_resource type="Script" uid="uid://sjxqn0uaap86" path="res://scenes/game/healthbar.gd" id="4_78p35"]
+
+[node name="Earth" type="Area2D"]
+z_index = 1
+collision_mask = 2
+script = ExtResource("1_6ml4b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2.38419e-07, -15)
+scale = Vector2(3.26326, 0.641933)
+texture = ExtResource("2_6ml4b")
+region_enabled = true
+region_rect = Rect2(267.91, 36.2163, 516.535, 243.824)
+
+[node name="Healthbar" type="TextureProgressBar" parent="."]
+texture_filter = 1
+offset_left = -501.0
+offset_top = -32.0
+offset_right = 502.0
+offset_bottom = -3.0
+nine_patch_stretch = true
+texture_under = ExtResource("2_k5w1d")
+texture_progress = ExtResource("3_3t2fh")
+script = ExtResource("4_78p35")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -91, 104, -89, 177, -87, 237, -83, 290, -80, 348, -75, 402, -69, 458, -62, 501, -56, 542, -49, 583, -41, 635, -29, 681, -17, 711, -7, 735, 2, 754, 10, 771, 19, 788, 30, 798, 39, 807, 48, 813, 56, 815, 62, 815, 63, -826, 63, -826, 61, -822, 54, -805, 36, -783, 20, -753, 5, -715, -10, -682, -21, -633, -33, -559, -48, -492, -59, -427, -67, -345, -76, -257, -83, -162, -88, -83, -90)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="health_depleted" from="Healthbar" to="." method="_on_healthbar_health_depleted"]
