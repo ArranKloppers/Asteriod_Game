@@ -10,17 +10,28 @@ config_version=5
 
 [application]
 
-config/name="CMPG 323 Tower Defense"
-run/main_scene="uid://cksbl8mfi2pjt"
+config/name="Asteroids Game"
+run/main_scene="uid://dwrruaeusb53q"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
-[editor]
+[autoload]
 
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
+SceneSwitcher="*res://scenes/scene_switcher.gd"
+
+[display]
+
+window/size/viewport_width=1900
+window/size/viewport_height=900
+
+[dotnet]
+
+project/assembly_name="Asteroids Game"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
