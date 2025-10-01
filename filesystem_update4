@@ -1,0 +1,7 @@
+res://scenes/turrets/normal_turret.tscn
+res://scenes/turrets/piercing_turret.tscn
+res://scenes/game/game_menu.tscn
+res://scenes/game/game.tscn
+res://scenes/map/turret_menu.tscn
+res://scenes/turrets/upgrade_menu.tscn
+res://scenes/map/placement_square.tscn
